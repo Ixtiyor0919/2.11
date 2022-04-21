@@ -66,6 +66,10 @@
         }
         &-img-link {
             padding: 24px;
+            .preview-img {
+                width: 290px;
+                height: 70px;
+            }
         }
         &-img-link::after {
             content: "";
