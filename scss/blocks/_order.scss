@@ -1,0 +1,239 @@
+.order {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-color: #000000;
+    text-align: center;
+    &-title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 76px;
+        color: #FFFFFF;
+    }
+    &-top {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .monthly {
+            color: #FFFFFF;
+            opacity: 1;
+            transform: translate(-68px, -10px);
+        }
+        .yearly {
+            color: #F5F5F5;
+            opacity: 0.5;
+            transform: translate(164px, -38px);
+        }
+        .get-text {
+            display: block;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        .switch-input {
+            transform: translate(80px, 20px);
+            opacity: 0;
+        }
+        .checkbox-switch {
+            width: 104px;
+            height: 52px;
+            margin: 0 24px;
+            background: #958d8d;
+            border-radius: 99px;
+            position: absolute;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        .checkbox-switch::before {
+            content: "";
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            top: 8px;
+            right: 60px;
+            transition: right .4s ;
+            border-radius: 99px;
+            background: #fefefe;
+        }
+        .switch-input:checked + .checkbox-switch {
+            background-color: #1ad925d9;
+        }
+        .switch-input:checked + .checkbox-switch::before {
+            right: 80px;position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #A8FF35;
+        }
+        .switch-input:checked ~ .monthly {
+            color: #F5F5F5;
+            opacity: 0.5;
+        }
+        .switch-input:checked ~ .yearly {
+            color: #FFFFFF;
+            opacity: 1;
+        }
+    }
+    &-top::after {
+        content: "";
+        width: 88px;
+        height: 66px;
+        margin-left: 24px;
+        background: url(../../images/order-img.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        transform: translate(184px, -10px);
+    }
+    &-bottom {
+        display: flex;
+        justify-content: center;
+        .order-card {
+            height: 640px;
+            padding: 32px 32px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            background: #FAFAFA;
+            border-radius: 16px;
+            &-title {
+                margin-bottom: 8px;
+                font-size: 36px;
+                line-height: 100%;
+                color: #000000;
+            }
+            &-description {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 100%;
+                color: #000000;
+            }
+            &-line {
+                margin: 32px 0;
+                border: none;
+                opacity: 0.2;
+                border: 1px solid #000000;
+            }
+            &-price {
+                margin-bottom: 25px;
+                font-size: 64px;
+                line-height: 100%;
+                color: #000000;
+                display: inline-block;
+            }
+            &-price::after {
+                content: "/Month";
+                margin-left: 8px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 100%;
+                color: #000000;
+            }
+            &-list {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                .card-list-item {
+                    margin: 15px 0;
+                    display: flex;
+                    align-items: center;
+                }
+                .card-list-item::before {
+                    content: "";
+                    width: 14px;
+                    height: 9px;
+                    display: inline-block;
+                    margin-right: 8px;
+                    background: url(../../images/icon.svg) no-repeat;
+                    background-position: center;
+                    background-size: contain;
+
+                }
+            }
+            &-btn {
+                width: 100%;
+                text-align: center;
+                padding: 16px 88px;
+                margin-top: auto;
+                border-radius: 29px;
+            }
+        }
+        .order-card:nth-child(-1n+2) {
+            margin-right: 40px;
+        }
+        .succes-card {
+            background-color: #A8FF35;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .order {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &-title {
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 43px;
+        }
+        &-top {
+            margin: 32px 0  80px 0;
+            .get-text {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            .monthly {
+                transform: translate(-100px, -10px);
+            }
+            .yearly {
+                transform: translate(74px, -78px);
+            }
+            .yearly::before {
+                content: "";
+                width: 63px;
+                height: 66px;
+                display: inline-block;
+                background: url(../../images/order-media-img.png) no-repeat;
+                background-position: center;
+                background-size: cover;
+                transform: translate(40px, 76px);
+            }
+            .checkbox-switch {
+                height: 44px;
+                transform: translateX(-50%);
+            }
+            .checkbox-switch::before {
+                width: 28px;
+                height: 28px;
+                right: 68px;
+            }
+        }
+        &-top::after {
+            display: none;
+        }
+        &-bottom {
+            flex-direction: column;
+            .order-card {
+                padding: 30px 30px 24px 30px;
+                margin-bottom: 24px;
+                &-title {
+                    margin-bottom: 14px;
+                    font-size: 32px;
+                }
+                &-line {
+                    margin: 24px 0 32px 0;
+                }
+                &-price {
+                    font-size: 60px;
+                }
+                &-btn {
+                    padding: 14px 80px;
+                }
+            }
+            .order-card:nth-child(-1n+2) {
+                margin-right: unset;
+            }
+            .order-card:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

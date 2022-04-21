@@ -1,0 +1,24 @@
+.tooltip {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    &-text {
+        width: 100%;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 76px;
+    }
+    &-grey-text {
+        color: #ADADAD;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .tooltip {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &-text {
+            font-size: 36px;
+            line-height: 43px;
+        }   
+    }
+}

@@ -4,11 +4,13 @@ html{
 *, 
 *::after,
 *::before{
+    padding: 0;
+    margin: 0;
     box-sizing: inherit;
 }
 body{
     font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Effra', 'GoodDogNew', 'Roboto', 'Inter', sans-serif;
 }
 
 .visually-hidden{
@@ -23,7 +25,34 @@ body{
 }
 
 .container{
-    max-width: 1280px;
-    padding: 0 30px;
+    max-width: 1440px;
+    padding: 0 80px;
     margin: auto;
+}
+
+//global styles button
+
+.btn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    text-decoration: none;
+    &--white {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+    &--succes {
+        color: #000000;
+        background: #A8FF35;
+    }
+    &--black {
+        color: #FFFFFF;
+        background-color: #000000;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 18px;
+    }
 }

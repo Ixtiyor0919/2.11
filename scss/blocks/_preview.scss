@@ -1,0 +1,91 @@
+.preview {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    align-items: center;
+    text-align: center;
+    background: #A8FF35;
+    &-title {
+        width: 100%;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 86px;
+        color: #000000;
+    }
+    &-img-link {
+        padding: 60px 80px;
+        margin: 60px 0;
+        text-decoration: none;
+        display: inline-block;
+        background: #F5F5F5;
+        border-radius: 16px;
+    }
+    &-img-link::before {
+        content: "";
+        width: 95px;
+        height: 73px;
+        display: inline-block;
+        background: url(../../images/preview-before.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        transform: translate(-195px);
+    }
+    &-img-link::after {
+        content: "";
+        width: 100px;
+        height: 70px;
+        display: inline-block;
+        background: url(../../images/preview-after.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        transform: translate(102px, -20px);
+    }
+    &-description {
+        width: 45%;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #000000;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .preview {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &-title {
+            font-size: 36px;
+            line-height: 112%;
+        }
+        &-description {
+            width: 80%;
+            font-size: 14px;
+            line-height: 150%;
+        }
+        &-img-link {
+            padding: 24px;
+        }
+        &-img-link::after {
+            content: "";
+            width: 99px;
+            height: 68px;
+            display: inline-block;
+            background: url(../../images/preview-media-top.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translate(-80px, -72px);
+        }
+        &-img-link::before {
+            content: "";
+            width: 94px;
+            height: 65px;
+            display: inline-block;
+            background: url(../../images/preview-media-bottom.png) no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translate(-30px, 90px);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.contact {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #A8FF35;
+    &-title {
+        width: 56%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 112%;
+        color: #000000;
+    }
+    &-title-succes {
+        color: #87D322;
+    }
+    &-btn {
+        padding: 16px 52px;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 375px) {
+    .contact {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &-title {
+            width: 100%;
+            margin-bottom: 32px;
+            font-size: 36px;
+        }
+        &-btn {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+    }
+}
